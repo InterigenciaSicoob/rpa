@@ -1,0 +1,19 @@
+{% extends "admin/base_site.html" %}
+{% block title %}Login - Portal SIN{% endblock %}
+
+{% block content %}
+<div id="content">
+    <img id="logo" src="/static/admin/img/02.png" alt="Logo Portal SIN">
+    <h1>Bem-vindo ao Portal SIN</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input type="text" name="username" placeholder="Usuário" required>
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Senha" required>
+        </div>
+        <button type="submit">Acessar</button>
+    </form>
+</div>
+{% endblock %}
